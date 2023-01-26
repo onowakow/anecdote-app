@@ -1,19 +1,49 @@
 <app-header></app-header>
 <div class="container-fluid">
-  <app-anecdote-list></app-anecdote-list>
+  <div class="row">
+    <div class="col-md-8">
+      <app-blurb-list></app-blurb-list>
+    </div>
+    <div class="col-md-4">
+      <h3>New Blurb</h3>
+      <form>
+        <div class="form-group mb-2">
+          <label for="titleInput" class="mb-1">Title</label>
+          <input
+            class="form-control"
+            type="text"
+            id="titleInput"
+            placeholder="Enter Title"
+          />
+        </div>
+        <div class="form-group mb-2">
+          <label for="typeInput" class="mb-1">Type</label>
+          <select id="typeInput" class="form-control">
+            <option value="anecdote">Anecdote</option>
+            <option value="job-description">Job Description</option>
+          </select>
+        </div>
+        <div class="form-group mb-2">
+          <label for="storyInput" class="mb-1">Story</label>
+          <textarea id="storyInput" class="form-control" rows="5"></textarea>
+        </div>
+        <div class="form-group mb-2">
+          <label for="contextInput" class="mb-1">Context</label>
+          <select id="contextInput" class="form-control">
+            <option value="Mountain Woods Furniture">
+              Mountain Woods Furniture
+            </option>
+            <option value="SmallTown Transit Services LLC">
+              SmallTown Transit Services LLC
+            </option>
+            <option value="UWYO Transit">UWYO Transit</option>
+          </select>
+        </div>
+        <div class="d-flex justify-content-end">
+          <button class="btn btn-success">Create</button>
+          <button type="button" class="ms-2 btn btn-warning">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
-
-<hr />
-<p>First goals</p>
-<ul>
-  <li>Create list of anecdotes</li>
-  <li>Allow users to create new anecdotes</li>
-  <li>Split into logical components with inheritance</li>
-  <li>Add export</li>
-</ul>
-<p>Blurb Model</p>
-<ul>
-  <li>type: job description, anecdote,</li>
-  <li>content: string</li>
-  <li>company/project/experience: string</li>
-</ul>
