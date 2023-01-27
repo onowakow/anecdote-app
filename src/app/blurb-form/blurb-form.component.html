@@ -1,0 +1,59 @@
+<h3>New Blurb</h3>
+<form>
+  <div class="form-group mb-2">
+    <label for="titleInput" class="mb-1">Title</label>
+    <input
+      class="form-control"
+      type="text"
+      id="titleInput"
+      placeholder="Enter Title"
+      [(ngModel)]="blurb.title"
+      name="titleInput"
+    />
+  </div>
+  <div class="form-group mb-2">
+    <label for="typeInput" class="mb-1">Type</label>
+    <select
+      [(ngModel)]="blurb.type"
+      id="typeInput"
+      class="form-control"
+      name="typeInput"
+    >
+      <option value="" selected disabled>Select Type</option>
+      <option value="anecdote">Anecdote</option>
+      <option value="job-description">Job Description</option>
+    </select>
+  </div>
+  <div class="form-group mb-2">
+    <label for="contextInput" class="mb-1">Context</label>
+    <select
+      id="contextInput"
+      class="form-control"
+      name="contextInput"
+      [(ngModel)]="blurb.context"
+    >
+      <option value="" selected disabled>Select Context</option>
+      <option value="Mountain Woods Furniture">Mountain Woods Furniture</option>
+      <option value="SmallTown Transit Services LLC">
+        SmallTown Transit Services LLC
+      </option>
+      <option value="UWYO Transit">UWYO Transit</option>
+    </select>
+  </div>
+  <div class="form-group mb-2">
+    <label for="storyInput" class="mb-1">Story</label>
+    <textarea
+      id="storyInput"
+      class="form-control"
+      rows="5"
+      name="storyInput"
+      [(ngModel)]="blurb.story"
+    ></textarea>
+  </div>
+  <div class="d-flex justify-content-end">
+    <button class="btn btn-success">Create</button>
+    <button type="button" class="ms-2 btn btn-warning" (click)="clearBlurb()">
+      Cancel
+    </button>
+  </div>
+</form>
